@@ -1,13 +1,21 @@
 import React from 'react';
-import { Route, Redirect } from "react-router-dom";
+import { Route } from "react-router-dom";
 import StoryList from './StoryList';
 
-function Routes() {
-  return (
-    <div className='Routes'>
-      <Route exact path='/' >
-        <StoryList />
-      </Route>
-    </div>
-  )
+/** Renders routes
+ * 
+ * App -> StoryList -> {SearchForm, Story}
+ */
+class Routes extends React.Component {
+  render() {
+    return (
+      <div className='Routes'>
+        <Route path='/' >
+          <StoryList />
+        </Route>
+      </div>
+    )
+  }
 }
+
+export default Routes
